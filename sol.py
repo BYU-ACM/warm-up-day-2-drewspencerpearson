@@ -7,7 +7,20 @@ def Binary_Search(arr, to_find):
      returns: index (int), x, s.t. arr[x] == to_find
               None(none-type) if for all x, arr[x] != to_find
   """
-  pass
+  i = 0
+  n = len(arr)
+  mid = n/2
+  while i < n:
+    print mid
+    if to_find > arr[mid]:
+      mid = n-mid/2
+      i+=1
+    elif to_find <arr[mid]:
+      mid = mid - mid/2
+      i+=1
+    else:
+      return mid
+
 
 def Bisection(func, left_side, right_side, tol=1e-5):
   """A direct implementation of Newton's Method
@@ -21,3 +34,9 @@ def Bisection(func, left_side, right_side, tol=1e-5):
               None(none-type) if func(left_side), func(right_side) < 0 or func(left_side), func(right_side) > 0
   """
   pass
+
+
+arr = [1,2,3,4,5,6,7,8,9]
+print arr[7]
+to_find = 7
+#print Binary_Search(arr, to_find)
